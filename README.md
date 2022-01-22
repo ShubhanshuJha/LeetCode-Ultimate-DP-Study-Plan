@@ -14,4 +14,10 @@ _[Here]_ is the link to the LeetCode Ultimate DP Study Plan.
 + The problem can be broken down into "overlapping subproblems" - smaller versions of the original problem that are re-used multiple times.
 + The problem has an "optimal substructure" - an optimal solution can be formed from optimal solutions to the overlapping subproblems of the original problem.
 
-======
+------
+## Top-down and Bottom-up
+There are two ways to implement a DP algorithm:
+1. Bottom-up, also known as tabulation.
+2. Top-down, also known as memoization.
+
+------
