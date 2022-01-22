@@ -23,26 +23,27 @@ There are two ways to implement a DP algorithm:
 
 + **Bottom-up (Tabulation)**:
 Bottom-up is implemented with iteration and starts at the base cases. Let's use the Fibonacci sequence as an example again. The base cases for the Fibonacci sequence are
-F(0)=0F(0) = 0F(0)=0 and F(1)=1F(1) = 1F(1)=1. With bottom-up, we would use these base cases to calculate F(2)F(2)F(2), and then use that result to calculate F(3)F(3)F(3),
-and so on all the way up to F(n)F(n)F(n).
+F(0)=0 and F(1)=1. With bottom-up, we would use these base cases to calculate F(2), and then use that result to calculate F(3),
+and so on all the way up to F(n).
 
 
 + **Top-down (Memoization)**:
-Top-down is implemented with recursion and made efficient with memoization. If we wanted to find the nthn^{th}nth Fibonacci number F(n)F(n)F(n), we try to compute this by
-finding F(n−1)F(n - 1)F(n−1) and F(n−2)F(n - 2)F(n−2). This defines a recursive pattern that will continue on until we reach the base cases
-F(0)=F(1)=1F(0) = F(1) = 1F(0)=F(1)=1. The problem with just implementing it recursively is that there is a ton of unnecessary repeated computation. Take a look at the
-recursion tree if we were to find F(5)F(5)F(5):
+Top-down is implemented with recursion and made efficient with memoization. If we wanted to find the nthn^{th}nth Fibonacci number F(n), we try to compute this by
+finding F(n−1) and F(n−2). This defines a recursive pattern that will continue on until we reach the base cases
+F(0)=F(1)=1. The problem with just implementing it recursively is that there is a ton of unnecessary repeated computation. Take a look at the
+recursion tree if we were to find F(5):
 ![alt text](https://leetcode.com/explore/learn/card/Figures/DP1/C1A2_1.png "Recursion Tree")
 
-Notice that we need to calculate F(2)F(2)F(2) three times. This might not seem like a big deal, but if we were to calculate F(6)F(6)F(6), this entire image would be only
+Notice that we need to calculate F(2) three times. This might not seem like a big deal, but if we were to calculate F(6), this entire image would be only
 one child of the root. Imagine if we wanted to find F(100)F(100)F(100) - the amount of computation is exponential and will quickly explode. The solution to this is to
 memoize results.
 ```
-memoizing a result means to store the result of a function call, usually in a hashmap or an array, so that when the same function call is made again, we can simply
-return the memoized result instead of recalculating the result.
+memoizing a result means to store the result of a function call, usually in a hashmap or an array, so that when the same function
+call is made again, we can simply return the memoized result instead of recalculating the result.
 ```
 
-After we calculate F(2)F(2)F(2), let's store it somewhere (typically in a hashmap), so in the future, whenever we need to find F(2)F(2)F(2), we can just refer to the value we already calculated instead of having to go through the entire tree again. Below is an example of what the recursion tree for finding F(6)F(6)F(6) looks like with and without memoization:
+After we calculate F(2), let's store it somewhere (typically in a hashmap), so in the future, whenever we need to find F(2), we can just refer to the value we already calculated instead of having to go through the entire tree again. Below is an example of what the recursion tree for finding F(6) looks like with and without memoization:
+
 ![alt text](blob:https://leetcode.com/5348c11c-a10a-44ea-b97d-b621de98782a "Recursion Tree")
 
 ------
