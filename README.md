@@ -8,4 +8,10 @@ Dynamic programming is both a mathematical optimization method and a computer pr
 [Here]: https://leetcode.com/study-plan/dynamic-programming/?progress=n5biiqs
 
 ------
+## What is Dynamic Programming?
+
+```Dynamic Programming (DP)``` is a programming paradigm that can systematically and efficiently explore all possible solutions to a problem. As such, it is capable of solving a wide variety of problems that often have the following characteristics:
++ The problem can be broken down into "overlapping subproblems" - smaller versions of the original problem that are re-used multiple times.
++ The problem has an "optimal substructure" - an optimal solution can be formed from optimal solutions to the overlapping subproblems of the original problem.
+
 ======
