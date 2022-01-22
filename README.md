@@ -33,4 +33,11 @@ finding F(n−1)F(n - 1)F(n−1) and F(n−2)F(n - 2)F(n−2). This defines a re
 F(0)=F(1)=1F(0) = F(1) = 1F(0)=F(1)=1. The problem with just implementing it recursively is that there is a ton of unnecessary repeated computation. Take a look at the
 recursion tree if we were to find F(5)F(5)F(5):
 ![alt text](https://leetcode.com/explore/learn/card/Figures/DP1/C1A2_1.png "Recursion Tree")
+
+Notice that we need to calculate F(2)F(2)F(2) three times. This might not seem like a big deal, but if we were to calculate F(6)F(6)F(6), this entire image would be only
+one child of the root. Imagine if we wanted to find F(100)F(100)F(100) - the amount of computation is exponential and will quickly explode. The solution to this is to
+memoize results.
+```**memoizing** a result means to store the result of a function call, usually in a hashmap or an array, so that when the same function call is made again, we can simply
+return the **memoized** result instead of recalculating the result.```
+
 ------
