@@ -37,8 +37,11 @@ recursion tree if we were to find F(5)F(5)F(5):
 Notice that we need to calculate F(2)F(2)F(2) three times. This might not seem like a big deal, but if we were to calculate F(6)F(6)F(6), this entire image would be only
 one child of the root. Imagine if we wanted to find F(100)F(100)F(100) - the amount of computation is exponential and will quickly explode. The solution to this is to
 memoize results.
-```memoizing a result means to store the result of a function call, usually in a hashmap or an array, so that when the same function call is made again, we can simply
-return the memoized result instead of recalculating the result.```
+```
+memoizing a result means to store the result of a function call, usually in a hashmap or an array, so that when the same function call is made again, we can simply
+return the memoized result instead of recalculating the result.
+```
+
 After we calculate F(2)F(2)F(2), let's store it somewhere (typically in a hashmap), so in the future, whenever we need to find F(2)F(2)F(2), we can just refer to the value we already calculated instead of having to go through the entire tree again. Below is an example of what the recursion tree for finding F(6)F(6)F(6) looks like with and without memoization:
 ![alt text](blob:https://leetcode.com/5348c11c-a10a-44ea-b97d-b621de98782a "Recursion Tree")
 
