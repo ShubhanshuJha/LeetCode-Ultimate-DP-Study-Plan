@@ -44,7 +44,7 @@ call is made again, we can simply return the memoized result instead of recalcul
 
 After we calculate F(2), let's store it somewhere (typically in a hashmap), so in the future, whenever we need to find F(2), we can just refer to the value we already calculated instead of having to go through the entire tree again. Below is an example of what the recursion tree for finding F(6) looks like with memoization:
 
-![alt text] [tree]
+![alt text][tree]
 
 [tree]: https://github.com/ShubhanshuJha/LeetCode_Ultimate-DP-Study-Plan/blob/main/Recursion%20Tree%20after%20Memoization.png "Recursion Tree with Memoization"
 
