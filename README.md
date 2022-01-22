@@ -10,7 +10,7 @@ _[Here]_ is the link to the LeetCode Ultimate DP Study Plan.
 ------
 ## What is Dynamic Programming?
 
-_Dynamic Programming_** (DP) is a programming paradigm that can systematically and efficiently explore all possible solutions to a problem. As such, it is capable of solving a wide variety of problems that often have the following characteristics:
+**_Dynamic Programming_** (**DP**) is a programming paradigm that can systematically and efficiently explore all possible solutions to a problem. As such, it is capable of solving a wide variety of problems that often have the following characteristics:
 + The problem can be broken down into "overlapping subproblems" - smaller versions of the original problem that are re-used multiple times.
 + The problem has an "optimal substructure" - an optimal solution can be formed from optimal solutions to the overlapping subproblems of the original problem.
 
