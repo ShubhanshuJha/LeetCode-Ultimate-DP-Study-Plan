@@ -46,7 +46,7 @@ After we calculate F(2), let's store it somewhere (typically in a hashmap), so i
 
 ![alt text] [tree]
 
-[tree]: blob:https://leetcode.com/5348c11c-a10a-44ea-b97d-b621de98782a "Recursion Tree with Memoization"
+[tree]: https://github.com/ShubhanshuJha/LeetCode_Ultimate-DP-Study-Plan/blob/main/Recursion%20Tree%20after%20Memoization.png "Recursion Tree with Memoization"
 
 ------
 ## Which is better?
