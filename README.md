@@ -17,7 +17,7 @@ _[Here]_ is the link to the LeetCode Ultimate DP Study Plan.
 ------
 ## Top-down and Bottom-up
 There are two ways to implement a DP algorithm:
-1. Bottom-up, also known as tabulation.
-2. Top-down, also known as memoization.
+1. **_Bottom-up_**, also known as **tabulation**.
+2. **_Top-down_**, also known as **memoization**.
 
 ------
