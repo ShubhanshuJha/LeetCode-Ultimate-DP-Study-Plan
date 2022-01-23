@@ -43,7 +43,11 @@ when the same function call is made again, we can simply return the memoized res
 recalculating the result.
 ```
 
-After we calculate F(2), let's store it somewhere (typically in a hashmap), so in the future, whenever we need to find F(2), we can just refer to the value we already calculated instead of having to go through the entire tree again. Below is an example of what the recursion tree for finding F(6) looks like with memoization:
+After we calculate F(2), let's store it somewhere (typically in a hashmap), so in the future, whenever we need to find F(2), we can just refer to the value we already calculated instead of having to go through the entire tree again. Below is an example of what the recursion tree for finding F(6) looks like with memoization and without memoization:
+
+![alt text][tree]
+
+[tree]: https://github.com/ShubhanshuJha/LeetCode_Ultimate-DP-Study-Plan/blob/main/Recursion%20Tree%20before%20Memoization.png "Recursion Tree without Memoization"
 
 ![alt text][tree]
 
