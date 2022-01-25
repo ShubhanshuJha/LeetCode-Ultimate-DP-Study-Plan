@@ -4,11 +4,8 @@ Return the maximum number of points you can earn by applying the above operation
 
 class Solution {
     public int deleteAndEarn(int[] nums) {
-        int max = Integer.MIN_VALUE;
+        int max = Arrays.stream(nums).max().getAsInt();
         int n = nums.length;
-        for(int i = 0; i < n; i++){
-            max = Integer.max(nums[i], max);
-        }
         
         int freq[] = new int[max + 1];
         int inc[] = new int[max + 1];
@@ -17,9 +14,7 @@ class Solution {
         for(int i = 0; i < n; i++){
             freq[nums[i]]++;
         }
-        inc[0] = 0;
-        exc[0] = 0;
-        for(int i = 1; i < freq.length; i++){
+        for(int i = 1; i <= max; i++){
             if(freq[i] == 0) {
                 inc[i] = Integer.max(inc[i-1], exc[i-1]);
                 exc[i] = inc[i];
@@ -28,6 +23,6 @@ class Solution {
                 exc[i] = Integer.max(inc[i - 1], exc[i - 1]);
             }
         }
-        return Integer.max(inc[freq.length - 1], exc[freq.length - 1]);
+        return Integer.max(inc[max], exc[max]);
     }
 }
