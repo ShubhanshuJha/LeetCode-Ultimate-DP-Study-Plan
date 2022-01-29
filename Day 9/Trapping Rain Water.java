@@ -44,6 +44,6 @@ class Solution {
                 waterTrapped += (maxRight - heights[right]);
             }
         }
-		    return waterTrapped;
+	return waterTrapped;
     }
 }
