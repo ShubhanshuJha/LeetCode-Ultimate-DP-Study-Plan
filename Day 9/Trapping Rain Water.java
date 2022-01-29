@@ -18,8 +18,8 @@ class Solution {
         
         for (int i = 0; i < n; i++)
             waterTrapped += Integer.min(left[i], right[i]) - heights[i];
-
-		return waterTrapped;
+	
+	return waterTrapped;
     }
 }
 
