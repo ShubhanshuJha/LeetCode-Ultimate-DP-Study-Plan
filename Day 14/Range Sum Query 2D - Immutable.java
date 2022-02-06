@@ -13,8 +13,7 @@ class NumMatrix {
     public NumMatrix(int[][] matrix) {
         this.M = matrix.length;
         this.N = matrix[0].length;
-        this.matrix = new int[M][N];
-        this.matrix = matrix;
+        this.matrix = matrix.clone();
     }
     
     public int sumRegion(int row1, int col1, int row2, int col2) {
