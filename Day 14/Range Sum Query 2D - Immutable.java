@@ -26,3 +26,48 @@ class NumMatrix {
         return sum;
     }
 }
+
+
+// Optimized approach (working)
+class NumMatrix {
+    private int[][] matrix = null;
+    private int M, N;
+    
+    private int[][] dp = null;
+    public NumMatrix(int[][] matrix) {
+        this.M = matrix.length;
+        this.N = matrix[0].length;
+        this.matrix = matrix.clone();
+        dp = new int[M][N];
+        for (int i = 0; i < M; i++) {
+            int sum = 0;
+            for (int j = 0; j < N; j++) {
+                sum += matrix[i][j];
+                dp[i][j] = sum;
+            }
+        }
+    }
+    
+    public int sumRegion(int row1, int col1, int row2, int col2) {
+        int n = (row2 - row1) + 1;
+        int[] ignVal = new int[n];
+        int[] sum = new int[n];
+        
+        for (int i = row1, idx = 0; i <= row2; i++) {
+            sum[idx] = this.dp[i][col2];
+            if (col1 > 0)
+                ignVal[idx] = this.dp[i][col1 - 1];
+            idx++;
+        }
+        for (int i = 0; i < n; i++)
+            sum[i] -= ignVal[i];
+        
+        return (int)Arrays.stream(sum).sum();
+    }
+}
+
+/**
+ * Your NumMatrix object will be instantiated and called as such:
+ * NumMatrix obj = new NumMatrix(matrix);
+ * int param_1 = obj.sumRegion(row1,col1,row2,col2);
+ */
